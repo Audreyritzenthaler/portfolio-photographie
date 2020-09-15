@@ -28,7 +28,8 @@ const Portfolio = () => {
     formData.append('author', state.author)
     formData.append('serie_name', state.serie_name)
     formData.append('name', state.name)
-    axios.post('http://localhost:8000/portfolio', formData)
+    axios.post('http://localhost:8000/backoffice', formData)
+    console.log(state)
   }
 
   const handleChangeFile = (e) => {
