@@ -1,10 +1,11 @@
 import React from 'react'
 import './App.css'
+import Portfolio from './components/Portfolio'
 
 function App() {
   return (
     <div className="App">
-      My portfolio
+      <Portfolio />
     </div>
   );
 }
