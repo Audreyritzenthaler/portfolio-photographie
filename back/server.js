@@ -9,6 +9,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
 app.use('/portfolio', routes.portfolio)
+app.use('/backoffice', routes.backoffice)
 
 app.get('/', (req, res) => {
   res.send({ message: 'YES successfully connected!' })
