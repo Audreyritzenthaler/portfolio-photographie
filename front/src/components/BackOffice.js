@@ -1,25 +1,13 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-const Portfolio = () => {
+const BackOffice = () => {
   const [state, setState] = useState({
     file: null,
     author: '',
     serie_name: '',
     name: ''
   })
-
-
-  // const getImage = () => {
-  //   axios.get(`http://localhost:8000/portfolio`)
-  //   .then((res) => {
-  //     setState(res.data)
-  //   })
-  // }
- 
-  //   useEffect(() => {
-  //   getImage()
-  // }, [])
 
   const handleClick = (e) => {
     e.preventDefault()
@@ -47,4 +35,4 @@ const Portfolio = () => {
     )
 }
 
-export default Portfolio
+export default BackOffice

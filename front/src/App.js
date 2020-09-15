@@ -1,11 +1,11 @@
 import React from 'react'
 import './App.css'
-import Portfolio from './components/Portfolio'
+import BackOffice from './components/BackOffice';
 
 function App() {
   return (
     <div className="App">
-      <Portfolio />
+      <BackOffice />
     </div>
   );
 }
