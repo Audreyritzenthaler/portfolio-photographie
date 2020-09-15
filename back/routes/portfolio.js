@@ -4,7 +4,6 @@ const router = express.Router()
 const connection = require('../database')
 
 router.get('/', (req,res) => {
-    console.log(error.sql)
     const getSql = 'SELECT * FROM picture'
     connection.query(getSql, (error, results) => {
         if (error) {
