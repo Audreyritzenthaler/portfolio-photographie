@@ -7,6 +7,7 @@ require('dotenv').config()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
+app.use(express.static('public'))
 
 app.use('/portfolio', routes.portfolio)
 app.use('/backoffice', routes.backoffice)
