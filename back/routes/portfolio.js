@@ -9,7 +9,7 @@ router.get('/', (req,res) => {
         if (error) {
             res.status(500).json({ error: 'Failed to retrieve data !' })
         } else {
-            res.json({ results })
+            res.json(results)
         }
     })
 })
