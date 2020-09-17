@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { serverUrl } from '../config.js'
 import axios from 'axios'
+import { serverUrl } from '../config.js'
+
+import Image from './Image'
+import './Portfolio.css'
 
 const Portfolio = () => {
   const [image, setImage] = useState([])
@@ -18,10 +21,12 @@ const Portfolio = () => {
     }, [])
     
     return (
-        <div>
+        <div className='imagesList'>
             {image ? 
-                image.map((img, i) => 
-                    <img key={i} src={`${serverUrl}/${img.picture}`} alt={img.name}></img>
+                image.map((img, i) =>
+                    <div className='card'>
+                        <Image key={i} src={`${serverUrl}/${img.picture}`} alt={img.name} />
+                    </div>
                 ) : <p>loading</p>
             }
         </div>
