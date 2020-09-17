@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { serverUrl } from '../config.js'
 import axios from 'axios'
 
 const Portfolio = () => {
@@ -20,7 +21,7 @@ const Portfolio = () => {
         <div>
             {image ? 
                 image.map((img, i) => 
-                    <img key={i} src={img.picture} alt={img.name}></img>
+                    <img key={i} src={`${serverUrl}/${img.picture}`} alt={img.name}></img>
                 ) : <p>loading</p>
             }
         </div>
