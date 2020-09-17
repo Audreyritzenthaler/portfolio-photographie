@@ -4,12 +4,11 @@ import axios from 'axios'
 const Portfolio = () => {
   const [image, setImage] = useState([])
 
-
   const getImage = () => {
     axios.get(`http://localhost:8000/portfolio`)
     .then((res) => {
-      console.log('res', res.data.results)
-      setImage(res.data.results)
+      console.log('res', res.data)
+      setImage(res.data)
     })
 } 
 
