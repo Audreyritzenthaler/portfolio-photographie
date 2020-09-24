@@ -5,12 +5,14 @@ const cors = require('cors')
 require('dotenv').config()
 
 app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: false }))
 app.use(cors())
 app.use(express.static('public'))
 
+app.use('/authentification', routes.authentification)
 app.use('/portfolio', routes.portfolio)
 app.use('/backoffice', routes.backoffice)
+app.use('/register', routes.register)
 
 app.get('/', (req, res) => {
   res.send({ message: 'YES successfully connected!' })
