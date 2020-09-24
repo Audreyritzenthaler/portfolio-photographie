@@ -16,6 +16,9 @@ const Navbar = () => {
                 <li>
                     <NavLink to='/contact' activeClassname='active'>Contact</NavLink>
                 </li>
+                <li>
+                    <NavLink to='/identification' activeClassname='active'>propriétaire ?</NavLink>
+                </li>
             </ul>
         </nav>
     )
