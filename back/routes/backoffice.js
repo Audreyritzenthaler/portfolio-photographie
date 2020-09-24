@@ -4,6 +4,7 @@ const multer = require('multer')
 const path = require('path')
 
 const connection = require('../database')
+const { verifyToken } = require('../service/auth.service')
 
 const storage = multer.diskStorage({
     destination: function (req, file, callback) {
@@ -31,7 +32,7 @@ const storage = multer.diskStorage({
 }).single('file')
 
 
-router.post('/', (req,res) => {
+router.post('/', verifyToken, (req,res) => {
     upload(req, res, function (error) {
         if (error instanceof multer.MulterError) {
           return res.status(500).json({ error: 'echec' })
